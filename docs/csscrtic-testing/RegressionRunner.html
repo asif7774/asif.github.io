@@ -10,25 +10,11 @@
 
     <script src="node_modules/csscritic/csscritic.js"></script>
     <script>
-
         window.onload = function() {
             csscritic.addReporter(csscritic.BasicHTMLReporter());
             csscritic.add('src/');
             csscritic.execute();
         };
-        var img = new Image,
-    canvas = document.createElement("canvas"),
-    ctx = canvas.getContext("2d"),
-    src = "http://example.com/image"; // insert image url here
-
-img.crossOrigin = "Anonymous";
-
-img.onload = function() {
-    canvas.width = img.width;
-    canvas.height = img.height;
-    ctx.drawImage( img, 0, 0 );
-    localStorage.setItem( "savedImageData", canvas.toDataURL("image/png") );
-}
     </script>
 </body>
 </html>
