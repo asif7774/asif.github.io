@@ -2,11 +2,11 @@
 
 //Files to save in cache
 var files = [
-  './',
-  'css/styles.processed.css',
-  'js/react-with-addons.min.js',
-  'js/react-dom.min.js',
-  'js/app.processed.js',
+  './home',
+  './css/styles.processed.css',
+  './js/react-with-addons.min.js',
+  './js/react-dom.min.js',
+  './js/app.processed.js',
   './manifest.json'
 ];
 
