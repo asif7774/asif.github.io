@@ -7,7 +7,7 @@ var files = [
   './js/react-with-addons.min.js',
   './js/react-dom.min.js',
   './js/app.processed.js',
-  './manifest.json'
+  './manifest.js'
 ];
 
 //Adding `install` event listener

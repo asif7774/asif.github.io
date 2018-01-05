@@ -5,7 +5,7 @@
     <base href="./">
     <meta name=description content="Asif Ansari UI Developer">
     <meta name="theme-color" content="#d2d2d2"/>
-    <link rel="manifest" href="./manifest.json">
+    <link rel="manifest" href="./manifest.js">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="css/styles.processed.css">
   </head>
@@ -29,7 +29,7 @@
     (function () {
       //If serviceWorker supports, then register it.
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register('serviceWorker.js') //setting scope of sw
+        navigator.serviceWorker.register('./serviceWorker.js') //setting scope of sw
         .then(function (registration) {
           console.info('Service worker is registered!');
           checkForPageUpdate(registration); // To check if new content is updated or not
