@@ -1,8 +1,14 @@
 {
-    "name": "Asif Ansari",
-    "short_name": "Asif Ansari",    
-    "icons": [
-        {
+  "name": "Asif Ansari",
+  "short_name": "Asif Ansari",  
+  "description": "Demo for progressive web app with push notifications, background sync etc.",
+  "start_url": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#d2d2d2",
+  "theme_color": "#d2d2d2",
+  "icons": [
+      {
         "src": "img/aha_128.png",
         "type": "image/png",
         "sizes": "128x128"
@@ -32,9 +38,11 @@
         "type": "image/png",
         "sizes": "512x512"
         }
-    ],    
-    "start_url": "./",
-    "display": "standalone",
-    "background_color": "#d2d2d2",
-    "theme_color": "#d2d2d2"
+  ],
+  "author": {
+    "name": "Asif Ansari",
+    "website": "https://asif7774.github.io",
+    "github": "https://asif7774.github.io",
+    "source-repo": "https://github.com/asif7774/asif7774.github.io"
+  }
 }
