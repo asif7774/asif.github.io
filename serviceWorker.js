@@ -34,45 +34,45 @@ self.addEventListener('install', (event) => {
 /*
   FETCH EVENT: triggered for every request made by index page, after install.
 */
-// self.addEventListener('fetch', function(event) {
-//   event.respondWith(caches.match(event.request));
-//   console.log(event.respondWith(caches.match(event.request)));
-// });
-
-//Adding `fetch` event listener
-self.addEventListener('fetch', (event) => {
-  console.info('Event: Fetch');
-
-  var request = event.request;
-
-  //Tell the browser to wait for newtwork request and respond with below
-  event.respondWith(
-    //If request is already in cache, return it
-    caches.match(request).then((response) => {
-      if (response) {
-        return response;
-      }
-
-      // Checking for navigation preload response
-      if (event.preloadResponse) {
-        console.info('Using navigation preload');
-        return response;
-      }
-
-      //if request is not cached or navigation preload response, add it to cache
-      return fetch(request).then((response) => {
-        var responseToCache = response.clone();
-        caches.open(cacheName).then((cache) => {
-            cache.put(request, responseToCache).catch((err) => {
-              console.warn(request.url + ': ' + err.message);
-            });
-          });
-
-        return response;
-      });
-    })
-  );
+self.addEventListener('fetch', function(event) {
+  event.respondWith(caches.match(event.request));
+  console.log(event.respondWith(caches.match(event.request)));
 });
+
+// //Adding `fetch` event listener
+// self.addEventListener('fetch', (event) => {
+//   console.info('Event: Fetch');
+
+//   var request = event.request;
+
+//   //Tell the browser to wait for newtwork request and respond with below
+//   event.respondWith(
+//     //If request is already in cache, return it
+//     caches.match(request).then((response) => {
+//       if (response) {
+//         return response;
+//       }
+
+//       // Checking for navigation preload response
+//       if (event.preloadResponse) {
+//         console.info('Using navigation preload');
+//         return response;
+//       }
+
+//       //if request is not cached or navigation preload response, add it to cache
+//       return fetch(request).then((response) => {
+//         var responseToCache = response.clone();
+//         caches.open(cacheName).then((cache) => {
+//             cache.put(request, responseToCache).catch((err) => {
+//               console.warn(request.url + ': ' + err.message);
+//             });
+//           });
+
+//         return response;
+//       });
+//     })
+//   );
+// });
 
 
 
