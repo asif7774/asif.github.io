@@ -1,8 +1,8 @@
 {
     "name": "Asif Ansari",
     "short_name": "Asif Ansari",
-    "start_url" : "https://asif7774.github.io/index.html",
-    "scope_url" : "https://asif7774.github.io/",
+    "start_url": "./index.html?utm=homescreen",
+    "scope_url" : "./",
     "icons": [
         {
         "src": "img/aha_128.png",
