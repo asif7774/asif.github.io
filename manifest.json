@@ -33,7 +33,7 @@
         "sizes": "512x512"
         }
     ],
-    "start_url": "/",
+    "start_url": "https://asif7774.github.io/",
     "display": "standalone",
     "background_color": "#d2d2d2",
     "theme_color": "#d2d2d2"
