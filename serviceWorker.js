@@ -34,10 +34,10 @@ self.addEventListener('install', (event) => {
 /*
   FETCH EVENT: triggered for every request made by index page, after install.
 */
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request));
-  console.log(event.respondWith(caches.match(event.request)));
-});
+// self.addEventListener('fetch', function(event) {
+//   event.respondWith(caches.match(event.request));
+//   console.log(event.respondWith(caches.match(event.request)));
+// });
 
 //Adding `fetch` event listener
 self.addEventListener('fetch', (event) => {
