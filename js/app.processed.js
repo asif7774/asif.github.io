@@ -8894,10 +8894,10 @@
 	var App = function (_React$Component) {
 	  _inherits(App, _React$Component);
 
-	  function App(props) {
+	  function App() {
 	    _classCallCheck(this, App);
 
-	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+	    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).apply(this, arguments));
 	  }
 
 	  _createClass(App, [{
@@ -8905,7 +8905,7 @@
 	    value: function render() {
 	      return React.createElement(
 	        'div',
-	        { className: 'center' },
+	        null,
 	        React.createElement(_introCard2.default, null)
 	      );
 	    }
@@ -8914,9 +8914,7 @@
 	  return App;
 	}(React.Component);
 
-	;
-
-	ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
+		ReactDOM.render(React.createElement(App, null), document.getElementById('app'));
 
 /***/ }),
 /* 327 */
@@ -9113,9 +9111,10 @@
 	    value: function render() {
 	      return React.createElement(
 	        "a",
-	        { href: this.props.href, onMouseOver: this.onMouseOver.bind(this), onMouseLeave: this.onMouseOut.bind(this) },
+	        { href: this.props.href, title: this.props.name, onMouseOver: this.onMouseOver.bind(this), onMouseLeave: this.onMouseOut.bind(this) },
 	        React.createElement(
-	          "svg", { "class": "icon icon-bubble icon-larger", "id": "icon icon-bubble icon-larger"  },
+	          "svg",
+	          { "class": "icon icon-bubble icon-larger" },
 	          React.createElement("use", { xlinkHref: '#' + this.props.name })
 	        )
 	      );

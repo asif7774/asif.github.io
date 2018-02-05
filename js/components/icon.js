@@ -10,7 +10,7 @@ class Icon extends React.Component {
 
   render() {
     return (
-      <a href={this.props.href } onMouseOver={this.onMouseOver.bind(this)} onMouseLeave={this.onMouseOut.bind(this)}>
+      <a href={this.props.href } title={this.props.name} onMouseOver={this.onMouseOver.bind(this)} onMouseLeave={this.onMouseOut.bind(this)}>
         <svg class="icon icon-bubble icon-larger">
           <use xlinkHref={ '#' + this.props.name }></use>
         </svg>

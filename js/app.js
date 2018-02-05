@@ -1,18 +1,14 @@
 import IntroCard from './components/intro-card';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+   render() {
     return (
-      <div className="center">
+      <div>
         <IntroCard />
-    	</div>)
+    	</div>
+    );
   }
-
-};
+}
 
 ReactDOM.render(
   <App />,
