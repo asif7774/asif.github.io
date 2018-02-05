@@ -10,6 +10,8 @@ var files = [
   './manifest.js'
 ];
 
+
+
 //Adding `install` event listener
 self.addEventListener('install', (event) => {
   console.info('Event: Install');
@@ -67,6 +69,10 @@ self.addEventListener('fetch', (event) => {
       });
     })
   );
+});
+
+self.addEventListener('fetch', function(event) {
+  event.respondWith(caches.match(event.request));
 });
 
 /*
