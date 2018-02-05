@@ -1,7 +1,7 @@
 {
     "name": "Asif Ansari",
     "short_name": "Asif Ansari",
-    "start_url": "./index.html?utm=homescreen",
+    "start_url": "./",
     "scope_url" : "./",
     "icons": [
         {
