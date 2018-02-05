@@ -15,7 +15,6 @@ var files = [
 //Adding `install` event listener
 self.addEventListener('install', (event) => {
   console.info('Event: Install');
-
   event.waitUntil(
     caches.open(cacheName)
     .then((cache) => {
@@ -35,6 +34,10 @@ self.addEventListener('install', (event) => {
 /*
   FETCH EVENT: triggered for every request made by index page, after install.
 */
+self.addEventListener('fetch', function(event) {
+  event.respondWith(caches.match(event.request));
+  console.log(event.respondWith(caches.match(event.request)););
+});
 
 //Adding `fetch` event listener
 self.addEventListener('fetch', (event) => {
@@ -50,11 +53,11 @@ self.addEventListener('fetch', (event) => {
         return response;
       }
 
-      // // Checking for navigation preload response
-      // if (event.preloadResponse) {
-      //   console.info('Using navigation preload');
-      //   return response;
-      // }
+      // Checking for navigation preload response
+      if (event.preloadResponse) {
+        console.info('Using navigation preload');
+        return response;
+      }
 
       //if request is not cached or navigation preload response, add it to cache
       return fetch(request).then((response) => {
@@ -71,10 +74,7 @@ self.addEventListener('fetch', (event) => {
   );
 });
 
-self.addEventListener('fetch', function(event) {
-  event.respondWith(caches.match(event.request));
-  console.log(caches);
-});
+
 
 /*
   ACTIVATE EVENT: triggered once after registering, also used to clean up caches.
