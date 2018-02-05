@@ -1,4 +1,4 @@
-﻿var cacheName = 'aha_cache';
+var cacheName = 'aha_cache';
 
 //Files to save in cache
 var files = [
@@ -73,6 +73,7 @@ self.addEventListener('fetch', (event) => {
 
 self.addEventListener('fetch', function(event) {
   event.respondWith(caches.match(event.request));
+  console.log(caches);
 });
 
 /*
