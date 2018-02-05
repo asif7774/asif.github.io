@@ -34,7 +34,7 @@
         }
     ],
     "scope_url" : "https://asif7774.github.io/",
-    "start_url" : "https://asif7774.github.io/",
+    "start_url" : "https://asif7774.github.io/index.html",
     "display": "standalone",
     "background_color": "#d2d2d2",
     "theme_color": "#d2d2d2"
