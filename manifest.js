@@ -1,8 +1,6 @@
 {
     "name": "Asif Ansari",
-    "short_name": "Asif Ansari",
-    "start_url": "./",
-    "scope_url" : "./",
+    "short_name": "Asif Ansari",    
     "icons": [
         {
         "src": "img/aha_128.png",
@@ -35,6 +33,7 @@
         "sizes": "512x512"
         }
     ],    
+    "start_url": "./",
     "display": "standalone",
     "background_color": "#d2d2d2",
     "theme_color": "#d2d2d2"
