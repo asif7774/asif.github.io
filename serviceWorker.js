@@ -3,10 +3,16 @@ var cacheName = 'aha_cache';
 //Files to save in cache
 var files = [
   './',
+  './img/aha_128.png',
+  './img/aha_144.png',
+  './img/aha_152.png',
+  './img/aha_192.png',
+  './img/aha_256.png',
+  './img/aha_512.png',
   './css/styles.processed.css',
-  './js/react-with-addons.min.js',
-  './js/react-dom.min.js',
-  './js/app.processed.js',
+//   './js/react-with-addons.min.js',
+//   './js/react-dom.min.js',
+//   './js/app.processed.js',
   './manifest.js'
 ];
 
