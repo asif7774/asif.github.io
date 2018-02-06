@@ -10,9 +10,9 @@ var files = [
   './img/aha_256.png',
   './img/aha_512.png',
   './css/styles.processed.css',
-//   './js/react-with-addons.min.js',
-//   './js/react-dom.min.js',
-//   './js/app.processed.js',
+  './js/react-with-addons.min.js',
+  './js/react-dom.min.js',
+  './js/app.processed.js',
   './manifest.js'
 ];
 
